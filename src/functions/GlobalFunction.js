@@ -12,7 +12,7 @@ function mean(arr) {
 
 
 function median(arr) {
-    const { length } = arr;
+    const { length } = arr.length;
 
     arr.sort((a, b) => a - b);
 
