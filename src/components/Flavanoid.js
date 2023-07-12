@@ -28,7 +28,7 @@ class Flavanoid extends React.Component {
                             <td>Class {distinct_class[index]}</td>
                             <td>{(mean(res_DataSet))}</td>
                             <td>{(median(res_DataSet))}</td>
-                            <td>{(mode(res_DataSet))}</td>
+                            <td>{'Value - ' + (mode(res_DataSet)).max + ', Count - ' + (mode(res_DataSet)).count}</td>
                         </tr>
                     })}
                 </table >

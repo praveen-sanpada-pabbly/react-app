@@ -43,7 +43,12 @@ function mode(arr) {
         }
     }
 
-    return max.toFixed(3);
+    var resObj = {
+        max: max.toFixed(3),
+        count: count
+    }
+
+    return resObj;
 };
 
 export {
