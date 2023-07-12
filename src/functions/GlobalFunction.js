@@ -4,15 +4,12 @@ function mean(arr) {
     let total = 0;
 
     for (let i = 0; i < arr.length; i++) {
-        total += arr[i];
+        total += Number(arr[i]);
     }
 
-    if (isNaN(total)) {
-        return 'Not A Number';
-    }
-
-    return (total / arr.length).toFixed(3);
+    return Number((total / arr.length).toFixed(3));
 };
+
 
 function median(arr) {
     const { length } = arr;
@@ -20,15 +17,12 @@ function median(arr) {
     arr.sort((a, b) => a - b);
 
     if (length % 2 === 0) {
-        return (arr[length / 2 - 1] + arr[length / 2]) / 2;
+        return (Number(arr[length / 2 - 1]) + Number(arr[length / 2])) / 2;
     }
 
-    if (isNaN(arr[(length - 1) / 2])) {
-        return 'Not A Number';
-    }
-
-    return arr[(length - 1) / 2].toFixed(3);
+    return Number(arr[(length - 1) / 2].toFixed(3));
 };
+
 
 function mode(arr) {
     const mode = {};
@@ -49,11 +43,7 @@ function mode(arr) {
         }
     }
 
-    if (isNaN(max)) {
-        return 'Not A Number';
-    }
-
-    return max;
+    return max.toFixed(3);
 };
 
 export {
